@@ -1,0 +1,15 @@
+sudo curl -L https://bootstrap.saltstack.com -o install-salt.sh 
+sh install-salt.sh -M -O  and address of the machine 
+ sh install-salt.sh -A and address of the salt-master  this code should run on minion machine 
+salt-key ****show you the keys******
+sudo salt-call --local key.finger ***show you on the local machine the macaddress**
+sudo salt-key -f Ip of the machine*****show you the macaddress of the machine and you compare them***
+salt-key -a ip address of the machine*****now you will acept the macine***
+ports that need to open in FW(default) 4505 4506 
+sudo salt '*' test.ping****cheek if your minions respond to the master***
+
+
+
+sudo service salt-minion stop****syntex for start/stop minion on the macine***
+
+salt '*' cdm.run 'mkdir /etc/test' **** use cmd.run tu run commands on any minion you want***
